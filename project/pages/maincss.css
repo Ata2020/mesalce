@@ -1,0 +1,31 @@
+nav>ul{
+    list-style: none;
+    /* махат се точките пред изброените в листа */
+    display: flex;
+/*  border: 1px solid #666; */
+}
+nav>ul>li{
+    flex: 0 0 16%;
+}
+li>a{
+    display:block;
+    width: 100%;
+    height: 2em;
+/*  align text items */
+/*  line-height:2;
+    vertical-align: middle;
+    text-align: center; */
+    
+/*  or algign items with flex - can be applied to any block elements, as well. */
+    display: flex;
+    align-items: center;
+  justify-content: center;
+    
+    text-decoration: none;
+    background: #955;
+    color: #FFF;
+    border: 1px solid #999;
+}
+
+
+

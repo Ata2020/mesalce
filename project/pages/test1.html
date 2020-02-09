@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <title>Astro5 - личен хороскоп</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Здравословно хранене, рецепти, за тялото, за спорта, за йога.">
+        <meta name="keywords" content="здравословно хранене, рецепти, за тялото, за спорта, за йога">
+        <meta name="author" content="mesalce.bg"> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+        <!-- <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" /> -->
+<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script> -->
+<!-- <script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#d9d9d9",
+      "text": "#3b3b3b"
+    },
+    "button": {
+      "background": "#ff5f33",
+      "text": "#ffffff"
+    }
+  },
+  "theme": "classic",
+  "position": "bottom-right",
+  "content": {
+    "message": "„Бисквитките” ни помагат да подобрим нашите услуги. Разглеждайки съдържанието на сайта, вие се съгласявате и с използването им.",
+    "dismiss": "ОК",
+    "link": "Прочети повече",
+    "href": "https://www.astro5.net/privacy"
+  }
+})});
+</script>        <link rel="stylesheet" href="https://astro5.net/css/all-b4e2c942b5.css">
+                <link rel="shortcut icon" href="https://astro5.net/favicon.ico" type="image/x-icon" />
+                <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-8395469-1', 'auto', {'legacyCookieDomain': 'www.astro5.net'});
+  ga('send', 'pageview');
+</script>             -->
+
+        </head>
+    <body id="app-layout">
+        <!--<div id="particles-js"></div>-->
+        <div id="flashAlert" class="alert alert- alert-dismissible fade in dn">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true"><i class="fa fa-times"></i></span></button>
+    <strong></strong>
+</div>
+
+
+<!-- <script type="text/javascript">
+    function showMsg(message, level) {
+        if (typeof level === 'undefined')
+            level = 'success';
+        level = 'alert-' + level;
+        $('#flashAlert').find('.msgContainer').text(message);
+        $('#flashAlert').removeClass('alert-warning').removeClass('alert-info').removeClass('alert-success').removeClass('alert-danger').addClass(level).stop().fadeTo('slow', 1);
+
+        setTimeout(function () {
+            $('#flashAlert').fadeOut('slow');
+            $('#flashAlert').addClass('dn');
+        }, 4000);
+    }
+</script> -->
+        <!-- Page Loader -->        
+        <div class="page-loader">
+            <div class="loader">
+                <div class="dot1"></div>
+                <div class="dot2"></div>
+            </div>
+        </div>
+        <!-- End Page Loader -->
+        <div class="page-wrapper">
+            <div class="top-wrapper top-wrapper__bg1" id="top">
+
+                <!-- Header -->
+                <header class="header header__fixed">
+                    <div class="header-main">
+                        <div class="container">
+                            <!-- Navigation -->
+                            <nav class="navbar navbar-default fhmm" role="navigation">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle">
+            <i class="fa fa-bars"></i>
+        </button>
+        <div class="logo">
+            <a href="https://astro5.net"><img src="https://astro5.net/images/logo.png" alt="Rocket"></a> 
+        </div>
+    </div><!-- end navbar-header -->
+    <div id="main-nav" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+
+            <li><a href="https://astro5.net">Днес</a></li>
+            <li><a href="https://astro5.net/moon">Луната</a></li>
+
+                        <li><a href="https://astro5.net/personal">За мен</a></li>
+            
+            <li><a href="https://astro5.net/horoscopes">Хороскопи</a></li>
+
+                        <li><a href="https://astro5.net/contact">Контакти</a></li>
+                        <li class="menu-item-none">
+                <a href="https://astro5.net/profile">Моят профил</i></a>
+            </li>
+            <li class="menu-item-none">
+                <a href="https://astro5.net/logout">Изход</i></a>
+            </li>
+                    </ul><!-- end nav navbar-nav -->
+                <ul class="home-ul">
+
+            <li class="item-has-cart dropdown dropdown-right fhmm-fw">
+                <div class="shopping-cart">
+                    <span class="cart-total">Здравей, <a title="Моят профил" class="fs16" href="https://astro5.net/profile">atanaskah</a></span>
+                    <a href="https://astro5.net/personal" class="cart-icon">
+                        <img alt="Рак" title="Вие сте зодия Рак" width="24" height="24" src="https://astro5.net/images/glyphs/signs/6/48/4.png">
+                    </a>
+                    <span style="font-size: 20px;">
+                        <a title="Моят профил" style="margin-right: 8px;"href="https://astro5.net/profile"><i class="fa fa-user"></i></a>
+                        <a title="Изход" href="https://astro5.net/logout"><i class="fa fa-close"></i></a>
+                    </span>
+                </div>
+            </li>
+        </ul>
+            </div><!-- end #main-nav -->
+</nav><!-- end navbar navbar-default fhmm -->                            <!-- Navigation / End -->
+                        </div>
+                    </div>
+                </header>
+                <!-- Header / End -->
+
+                <!-- Slider
+                ================================================== -->
+                <!---->
+                <!-- Slider / End -->
+
+            </div>
+
+            <!-- Content -->
+            <div class="content-wrapper">
+                <section class="page-section">
+    <div class="container">
+        <div class="row">
+            <main class="col-md-9">
+                                <div class="row">
+                    <div class="col-md-12">
+
+                        <div role="tabpanel">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li id="pdefault" role="presentation" class="active"><a href="#tab1-1" aria-controls="tab1-1" role="tab" data-toggle="tab" aria-expanded="true"><strong>Моите планети</strong></a></li>
+                                <li id="p0" role="presentation" class=""><a href="#tab1-2" aria-controls="tab1-2" role="tab" data-toggle="tab" aria-expanded="false"><strong>Слънцето</strong></a></li>
+                                <li role="presentation" class=""><a href="#tab1-3" aria-controls="tab1-3" role="tab" data-toggle="tab" aria-expanded="false"><strong>Асцендент</strong></a></li>
+                            </ul>
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active" id="tab1-1">
+                                    <div class="title-bordered border__solid">
+                                        <h5 class="h5-title">
+                                            <span class="purple-color">Позиции на планетите в личния Ви хороскоп:</span>
+                                            <span class="orange-color"> 
+                                                14.07.1966г. 03:00ч.
+
+ гр. Първомай
+                                            </span>
+                                        </h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 personal-1">
+                                            <table class="table transit-table">
+                                                <tbody>
+                                                                                                                                                            <tr>
+                                                        <td class="t2-td1">
+                                                            <img width="24" height="24" alt="Слънце" title="Слънце" src="https://astro5.net/images/glyphs/planets/2/48/slance.png">
+                                                        </td>
+                                                        <td class="t2-td2">
+                                                                                                                        <a class="sl tabr" href="#tab1-2" data-planet="0" role="tab" data-toggle="tab">Слънце в Рак</a>
+                                                                                                                    </td>
+                                                        <td class="t2-td3">
+                                                            <img width="24" height="24" alt="Рак" title="Рак" src="https://astro5.net/images/glyphs/signs/3/48/4.png">                                        
+                                                        </td>
+                                                        <td class="t2-td4">
+                                                            21&deg09'  
+                                                        </td>
+                                                        <td class="t2-td5">
+                                                            <img width="24" height="24" alt="2-ри дом" title="2-ри дом" src='https://astro5.net/images/glyphs/houses/1/48/2.png'>
+                                                        </td>
+                                                    </tr>
+                                                                                                                                                            <tr>
+                                                        <td class="t2-td1">
+                                                            <img width="24" height="24" alt="Луна" title="Луна" src="https://astro5.net/images/glyphs/planets/2/48/luna.png">
+                                                        </td>
+                                                        <td class="t2-td2">
+                                                                                                                        <a class="sl tabr" href="#tab2-1" data-planet="1" role="tab" data-toggle="tab">Луна в Телец</a>
+                                                                                                                    </td>
+                                                        <td class="t2-td3">
+                                                            <img width="24" height="24" alt="Телец" title="Телец" src="https://astro5.net/images/glyphs/signs/3/48/2.png">                                        
+                                                        </td>
+                                                        <td class="t2-td4">
+                                                            27&deg21'  
+                                                        </td>
+                                                        <td class="t2-td5">
+                                                            <img width="24" height="24" alt="12-ти дом" title="12-ти дом" src='https://astro5.net/images/glyphs/houses/1/48/12.png'>
+                                                        </td>
+                                                    </tr>
+                                                                                                                                                            <tr>
+                                                        <td class="t2-td1">
+                                                            <img width="24" height="24" alt="Меркурий" title="Меркурий" src="https://astro5.net/images/glyphs/planets/2/48/merkurii.png">
+                                                        </td>
+                                                        <td class="t2-td2">
+                                                                                                                        <a class="sl tabr" href="#tab2-2" data-planet="2" role="tab" data-toggle="tab">Меркурий в Лъв</a>
+                                                                                                                    </td>
+                                                        <td class="t2-td3">
+                                                            <img width="24" height="24" alt="Лъв" title="Лъв" src="https://astro5.net/images/glyphs/signs/3/48/5.png">                                        
+                                                        </td>
+                                                        <td class="t2-td4">
+                                                            11&deg23'  
+                                                        </td>
+                                                        <td class="t2-td5">
+                                                            <img width="24" height="24" alt="3-ти дом" title="3-ти дом" src='https://astro5.net/images/glyphs/houses/1/48/3.png'>
+                                                        </td>
+                                                    </tr>
+                                                                                                                                                            <tr>
+                                                        <td class="t2-td1">
+                                                            <img width="24" height="24" alt="Венера" title="Венера" src="https://astro5.net/images/glyphs/planets/2/48/venera.png">
+                                                        </td>
+                                                        <td class="t2-td2">
+                                                                                                                        <a class="sl tabr" href="#tab2-3" data-planet="3" role="tab" data-toggle="tab">Венера в Близнаци</a>
+                                                                                                                    </td>
+                                                        <td class="t2-td3">
+                                                            <img width="24" height="24" alt="Близнаци" title="Близнаци" src="https://astro5.net/images/glyphs/signs/3/48/3.png">                                        
+                                                        </td>
+                                                        <td class="t2-td4">
+                                                            20&deg49'  
+                                                        </td>
+                                                        <td class="t2-td5">
+                                                            <img width="24" height="24" alt="12-ти дом" title="12-ти дом" src='https://astro5.net/images/glyphs/houses/1/48/12.png'>
+                                                        </td>
+                                                    </tr>
+                                                                                                                                                            <tr>
+                                                        <td class="t2-td1">
+                                                            <img width="24" height="24" alt="Марс" title="Марс" src="https://astro5.net/images/glyphs/planets/2/48/mars.png">
+                                                        </td>
+                                                        <td class="t2-td2">
+                                                                                                                        <a class="sl tabr" href="#tab2-4" data-planet="4" role="tab" data-toggle="tab">Марс в Рак</a>
+                                                                                                                    </td>
+                                                        <td class="t2-td3">
+                                                            <img width="24" height="24" alt="Рак" title="Рак" src="https://astro5.net/images/glyphs/signs/3/48/4.png">                                        
+                                                        </td>
+                                                        <td class="t2-td4">
+                                                            01&deg57'  
+                                                        </td>
+                                                        <td class="t2-td5">
+                                                            <img width="24" height="24" alt="1-ви дом" title="1-ви дом" src='https://astro5.net/images/glyphs/houses/1/48/1.png'>
+                                                        </td>
+                                                    </tr>
+                                                                                                                                                            <tr>
+                                                        <td class="t2-td1">
+                                                            <img width="24" height="24" alt="Юпитер" title="Юпитер" src="https://astro5.net/images/glyphs/planets/2/48/iupiter.png">
+                                                        </td>
+                                                        <td class="t2-td2">
+                                                                                                                        <a class="sl tabr" href="#tab2-5" data-planet="5" role="tab" data-toggle="tab">Юпитер в Рак</a>
+                                                                                                                    </td>
+                                                        <td class="t2-td3">
+                                                            <img width="24" height="24" alt="Рак" title="Рак" src="https://astro5.net/images/glyphs/signs/3/48/4.png">                                        
+                                                        </td>
+                                                        <td class="t2-td4">
+                                                            15&deg00'  
+                                                        </td>
+                                                        <td class="t2-td5">
+                                                            <img width="24" height="24" alt="2-ри дом" title="2-ри дом" src='https://astro5.net/images/glyphs/houses/1/48/2.png'>
+                                                        </td>
+                                                    </tr>
+                                                                                                                                                            <tr>
+                                                        <td class="t2-td1">
+                                                            <img width="24" height="24" alt="Сатурн" title="Сатурн" src="https://astro5.net/images/glyphs/planets/2/48/saturn.png">
+                                                        </td>
+                                                        <td class="t2-td2">
+                                                                                                                        <a class="sl tabr" href="#tab2-6" data-planet="6" role="tab" data-toggle="tab">Сатурн в Риби</a>
+                                                                                                                    </td>
+                                                        <td class="t2-td3">
+                                                            <img width="24" height="24" alt="Риби" title="Риби" src="https://astro5.net/images/glyphs/signs/3/48/12.png">                                        
+                                                        </td>
+                                                        <td class="t2-td4">
+                                                            29&deg40'  
+                                                        </td>
+                                                        <td class="t2-td5">
+                                                            <img width="24" height="24" alt="11-ти дом" title="11-ти дом" src='https://astro5.net/images/glyphs/houses/1/48/11.png'>
+                                                        </td>
+                                                    </tr>
+                                                                                                                                                                                                            </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="col-md-6 personal-2">
+                                            <table class="table transit-table">
+                                                <tbody>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <tr>
+                                                        <td class="t2-td1">
+                                                            <img width="24" height="24" alt="Уран" title="Уран" src="https://astro5.net/images/glyphs/planets/2/48/uran.png">
+                                                        </td>
+                                                        <td class="t2-td2">
+                                                                                                                        <a class="sl tabr" href="#tab2-7" role="tab" data-planet="7" data-toggle="tab">Уран в Дева</a>
+                                                                                                                    </td>
+                                                        <td class="t2-td3">
+                                                            <img width="24" height="24" alt="Дева" title="Дева" src="https://astro5.net/images/glyphs/signs/3/48/6.png">                                                  
+                                                        </td>
+                                                        <td class="t2-td4">
+                                                            16&deg36'
+                                                        </td>
+                                                        <td class="t2-td5">
+                                                            <img width="24" height="24" alt="4-ти дом" title="4-ти дом" src='https://astro5.net/images/glyphs/houses/1/48/4.png'>
+                                                        </td>
+                                                    </tr>
+                                                                                                                                                            <tr>
+                                                        <td class="t2-td1">
+                                                            <img width="24" height="24" alt="Нептун" title="Нептун" src="https://astro5.net/images/glyphs/planets/2/48/neptun.png">
+                                                        </td>
+                                                        <td class="t2-td2">
+                                                                                                                        <a class="sl tabr" href="#tab2-8" role="tab" data-planet="8" data-toggle="tab">Нептун в Скорпион</a>
+                                                                                                                    </td>
+                                                        <td class="t2-td3">
+                                                            <img width="24" height="24" alt="Скорпион" title="Скорпион" src="https://astro5.net/images/glyphs/signs/3/48/8.png">                                                  
+                                                        </td>
+                                                        <td class="t2-td4">
+                                                            19&deg29'
+                                                        </td>
+                                                        <td class="t2-td5">
+                                                            <img width="24" height="24" alt="6-ти дом" title="6-ти дом" src='https://astro5.net/images/glyphs/houses/1/48/6.png'>
+                                                        </td>
+                                                    </tr>
+                                                                                                                                                            <tr>
+                                                        <td class="t2-td1">
+                                                            <img width="24" height="24" alt="Плутон" title="Плутон" src="https://astro5.net/images/glyphs/planets/2/48/pluton.png">
+                                                        </td>
+                                                        <td class="t2-td2">
+                                                                                                                        <a class="sl tabr" href="#tab2-9" role="tab" data-planet="9" data-toggle="tab">Плутон в Дева</a>
+                                                                                                                    </td>
+                                                        <td class="t2-td3">
+                                                            <img width="24" height="24" alt="Дева" title="Дева" src="https://astro5.net/images/glyphs/signs/3/48/6.png">                                                  
+                                                        </td>
+                                                        <td class="t2-td4">
+                                                            16&deg22'
+                                                        </td>
+                                                        <td class="t2-td5">
+                                                            <img width="24" height="24" alt="4-ти дом" title="4-ти дом" src='https://astro5.net/images/glyphs/houses/1/48/4.png'>
+                                                        </td>
+                                                    </tr>
+                                                                                                                                                            <tr>
+                                                        <td class="t2-td1">
+                                                            <img width="24" height="24" alt="Хирон" title="Хирон" src="https://astro5.net/images/glyphs/planets/2/48/hiron.png">
+                                                        </td>
+                                                        <td class="t2-td2">
+                                                                                                                        <a href="https://astro5.net/karmichen" class="sl">Хирон в Риби
+                                                                                                                    </td>
+                                                        <td class="t2-td3">
+                                                            <img width="24" height="24" alt="Риби" title="Риби" src="https://astro5.net/images/glyphs/signs/3/48/12.png">                                                  
+                                                        </td>
+                                                        <td class="t2-td4">
+                                                            26&deg08'
+                                                        </td>
+                                                        <td class="t2-td5">
+                                                            <img width="24" height="24" alt="10-ти дом" title="10-ти дом" src='https://astro5.net/images/glyphs/houses/1/48/10.png'>
+                                                        </td>
+                                                    </tr>
+                                                                                                                                                            <tr>
+                                                        <td class="t2-td1">
+                                                            <img width="24" height="24" alt="С. възел" title="С. възел" src="https://astro5.net/images/glyphs/planets/2/48/n_vazel.png">
+                                                        </td>
+                                                        <td class="t2-td2">
+                                                                                                                        <a href="https://astro5.net/karmichen" class="sl">С. възел в Телец
+                                                                                                                    </td>
+                                                        <td class="t2-td3">
+                                                            <img width="24" height="24" alt="Телец" title="Телец" src="https://astro5.net/images/glyphs/signs/3/48/2.png">                                                  
+                                                        </td>
+                                                        <td class="t2-td4">
+                                                            23&deg46'
+                                                        </td>
+                                                        <td class="t2-td5">
+                                                            <img width="24" height="24" alt="12-ти дом" title="12-ти дом" src='https://astro5.net/images/glyphs/houses/1/48/12.png'>
+                                                        </td>
+                                                    </tr>
+                                                                                                                                                            <tr>
+                                                        <td class="t2-td1">
+                                                            <img width="24" height="24" alt="Ю. възел" title="Ю. възел" src="https://astro5.net/images/glyphs/planets/2/48/s_vazel.png">
+                                                        </td>
+                                                        <td class="t2-td2">
+                                                                                                                        <a href="https://astro5.net/karmichen" class="sl">Ю. възел в Скорпион
+                                                                                                                    </td>
+                                                        <td class="t2-td3">
+                                                            <img width="24" height="24" alt="Скорпион" title="Скорпион" src="https://astro5.net/images/glyphs/signs/3/48/8.png">                                                  
+                                                        </td>
+                                                        <td class="t2-td4">
+                                                            23&deg46'
+                                                        </td>
+                                                        <td class="t2-td5">
+                                                            <img width="24" height="24" alt="6-ти дом" title="6-ти дом" src='https://astro5.net/images/glyphs/houses/1/48/6.png'>
+                                                        </td>
+                                                    </tr>
+                                                                                                                                                            <tr>
+                                                        <td class="t2-td1">
+                                                            <img width="24" height="24" alt="Лилит" title="Лилит" src="https://astro5.net/images/glyphs/planets/2/48/lilit.png">
+                                                        </td>
+                                                        <td class="t2-td2">
+                                                                                                                        <a href="https://astro5.net/karmichen" class="sl">Лилит в Риби
+                                                                                                                    </td>
+                                                        <td class="t2-td3">
+                                                            <img width="24" height="24" alt="Риби" title="Риби" src="https://astro5.net/images/glyphs/signs/3/48/12.png">                                                  
+                                                        </td>
+                                                        <td class="t2-td4">
+                                                            11&deg34'
+                                                        </td>
+                                                        <td class="t2-td5">
+                                                            <img width="24" height="24" alt="10-ти дом" title="10-ти дом" src='https://astro5.net/images/glyphs/houses/1/48/10.png'>
+                                                        </td>
+                                                    </tr>
+                                                                                                    </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="tab1-2">
+                                    <div class="title-bordered border__solid">
+                                        <h3 class="c water">
+                                            Слънце в знак Рак
+                                            <img style="margin-top: -3px;" src='https://astro5.net/images/glyphs/signs/5/48/4.png' width="24" height="24">
+                                        </h3>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="wp-caption aligncenter sun-water">
+                                                <img style="width:100%;" class="center-block" src="https://astro5.net/images/signs/asc/4.jpg" width="400" height="300" alt="Съзвезиде Рак" title="Съзвезиде Рак" />
+                                                <p class="wp-caption-text sun-cap">Съзвездие Рак</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p class="fe fs14" style="padding:0px;">
+                                                Наблюдава се най-добре през нощите от януари до май. Съзвездието е трудно различимо, защото звездите, от които е съставено, са от четвърта и по-малка звездна величина. Заобиколено е от съзвездията Лъв, Хидра, Близнаци и Рис. Геометричната фигура, която те образуват, наподобява триъгълник. 
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <hr class="hr1em">
+                                    <div class="title-bordered border__solid">
+                                        <h3 style="margin-top:10px;" class="c water">Вашият характер</h3>
+                                    </div>
+                                    
+<p class="service-p fe">Ракът е воден знак и това означава, че сте доста емоционална личност. Действате по-скоро под влияние на чувствата си, отколкото на мислите си. В отношенията си с хората не претегляте плюсовете и минусите, а взимате интуитивни решения дали да се доверите на даден човек или не. Ако гласувате доверието си на някого, обикновено той ви става приятел за цял живот. Но ако почувствате, че не можете да имате доверие на някого, никакви логични аргументи не могат да ви убедят в противното. </p>
+<p class="service-p fe">Домът и семейството са важни за вас. Искат да изградите живота си на сигурна и стабилна основа, затова влагате голяма част от енергията си в превръщането на дома си в уютна “крепост”. Семейството за вас е висша ценност и сте готови на всичко, за да го защитите. По скоро бихте простили някоя отправена към вас обида, отколкото обида към член от семейството ви. </p>
+<p class="service-p fe">По принцип сте големи традиционалисти. Миналото играе огромна роля за вас и не сте склонни да се разделите с предмети, които имат сантиментална стойност. Вероятно имате много чекмеджета пълни с ученически тетрадки, снимки, дребни предмети, антики. От друга страна живеете с доста страхове за бъдещето и затова използвате миналото като сигурен пристан. В резултат на тези страхове обаче много добре се грижите за собствените си интереси. Няма съмнение, че имате живо въображение и затова сте са добри художници, разказвачи фотографи, дизайнери или други професии, в които можете да изразите мечтите си </p>
+<p class="service-p fe">В отношенията с хората обикновено сте малко стеснителни и плахи, но когато се почувствате сред приятели, лесно се отпускате. Притежавате и ярко изразено чувство за хумор и се стремите дори и в най-трудните моменти да намерите нещо забавно и да развеселите обкръжението си. Можете да бъдете отлични слушатели и наистина да вникнете в чувствата и проблемите на човека срещу вас. Това ви качество ви прави търсени събеседници и изповедници. Ако видите някой изпаднал в нужда, ще обърне света, за да му помогнете. </p>
+<p class="service-p fe">Макар да обичате флиртовете, вие се стремите към брак, търсите човека, с когото да прекарате остатъка от живота си. Знаете добре какво искате - стабилна връзка, сигурност и дом. Затова очаквате много от партньора си. Искате да можете да разчитате на него през цялото време, а когато го няма или закъснее от работа, въображението ви започва да строи сценарии, един от друг по-невероятни, а някои и доста болезнени за вас. Нуждаете се от редовна проява на внимание от страна на близките и спокойна семейна и работна атмосфера. По отношение на нуждите на семейството си ще проявявате щедрост - и емоционална, и финансова. Като родителите обаче може да сте прекалено покровителствени. Ще искате постоянно да знаете какво правят децата ви. Дори и при най-слабото загатване за проблеми родителят Рак започва да се тревожи. </p>
+<p class="service-p fe"><strong>Положителни качества</strong>: <i>интуитивност, любезност, емоционалност, чувствителност, много добра памет, живо въображение, чувство за хумор, любов към родината. </i><br>
+<strong>Отрицателни качества</strong>: <i>раздразнителност, нерешителност, апатичност, злопаметност, потайност,свръхчувствителност, егоцентризъм, мрачно настроение, скръжавост. </i></p>
+
+                                    <div class="gap-5"></div>
+                                    <hr class="hr1em">
+                                    <div class="title-bordered border__solid">
+                                        <h3 style="margin-top:10px;" class="c water">Външен вид</h3>
+                                    </div>
+                                                                                                                                                <p class="service-p fe">
+                                                                                <b>Типичната жена Рак </b> е склонна към напълняване когато стане на средна възраст, има добре изразен бюст или липса на такъв, тесен ханш, дълги ръце и крака, здрави нокти, очи – големи, изразителни и красиви, чувствени устни. 
+                                                                            </p>
+                                    <p class="service-p fe">
+                                        <b>Личности родени под знака на Рак: </b>
+                                        принцеса Даяна, Рембранд, Рубенс, Шагал, Ел Греко, Дега, Маяковски, Петрарка, Лафонтен, Ж.Санд, Екзюпери, Хемингуей, Лайбниц, Русо, Джузепе Гарибалди, Луис Армстронг, Джордж Буш, Джина Лолобриджида, Михаил Левин, Павел Глоба,  Васил Левски, Петър Дънов, Иван Вазов, Елин Пелин, Димитър Димов, Георги Първанов, Анастасия Мозер, Юлиана Дончева, Нина Чилова, Богдана Карадочева, Йордан Лечков, Таня Богомилова 
+                                    </p>
+
+                                    <span class="center-block c water"><strong>Под знака на Рак е и</strong></span>
+                                                                        <div class="wp-caption aligncenter sun-water">
+                                        <img class="center-block" src="https://astro5.net/images/signs/people/010407isabelle_adjani.jpg" alt="Съзвезиде Рак" title="Съзвезиде Рак" />
+                                        <p class="wp-caption-text sun-cap"> Изабел Аджани</p>
+                                    </div>
+                                                                        <div class="gap-5"></div>
+                                    <hr class="hr1em">
+                                    <div class="title-bordered border__solid">
+                                        <h3 style="margin-top:10px;" class="c water">Астрологични съответствия</h3>
+                                    </div>
+                                    <p class="service-p fe">
+                                        <b>Стихия –</b> ВОДА, <b>качество -</b> кардинален
+  <br><br>
+<b>Планета управител -</b> ЛУНА
+<br><br>
+<b>Метал -</b> сребро; цвят - синьозелен
+<br><br>
+<b>Скъпоценни камъни:</b> изумруд, селенит, лунен камък
+<br><br>
+<b>Аромати:</b> акация, магнолия, лилия
+<br><br>
+<b>Хранене:</b> Препоръчват се най-вече риба и рибни продукти, морски дарове, млечни продукти, плодове, прясно и кисело мляко, ръжен хляб, ориз, зеле, краставици, тиква, картофи, ряпа, маруля, диня
+<br><br>
+<b>Здраве</b>
+Обмяната на веществата при Раците зависи от състоянието и количеството на течностите в организма, най-уязвимите места са лимфната система, потоотделящите жлези, стомаха. Повишената емоционална възбудимост води до психо-соматични болести в органите под управлението на Рака – колит, язва, гастрит, нервен стомах. Като цяло недобро здраве, ниски съпротивителни сили. Повишеният апетит или нередовното хранене може да доведе до нарушения в действието на жлъчката. Слабо място - стомахът, гърдите, черният дроб.
+<br><br>
+<b>Препоръки:</b> Да се укрепва нервната система, да се намалят отрицателните емоции, активно движение, за да се активизира циркулацията на течностите в организма. Да се консумира храна, която не натоварва работата на жлъчката. Дълбок и достатъчно продължителен сън.
+ 
+                                    </p>
+
+                                    <span class="center-block c water"><strong>Камъкът на вашата зодия e:</strong></span>
+                                    <div class="wp-caption aligncenter sun-water">
+                                        <img class="center-block" src="https://astro5.net/images/signs/stones/04smaragd.jpg" alt="Смарагд" title="Смарагд" />
+                                        <p class="wp-caption-text sun-cap"> Смарагд</p>
+                                    </div>
+                                    <hr>
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="tab1-3">
+                                                                        <div class="title-bordered border__solid">
+                                        <h3 class="c air">
+                                            Вашият Асцендент е Близнаци
+                                            <img style="margin-top: -3px;" src='https://astro5.net/images/glyphs/signs/5/48/3.png' width="24" height="24">
+                                        </h3>
+                                    </div>
+                                    <div class="wp-caption aligncenter sun-air">
+                                        <img style="max-width: 100%;" class="center-block" src="https://astro5.net/images/ascendent.gif"  alt="Асцендент Близнаци" title="Асцендент Близнаци" />
+                                    </div>
+                                    <p class="service-p fe fs14">
+                                        <strong>Асцендент</strong> (лат. ascendant - изгряващ) – с това наименование се обозначава зодиакалният знак, който е изгрявал на източния хоризонт в момента на вашето раждане. Той е втория по важност фактор във вашия хороскоп, след знака на Слънцето. Всъщност, характера и външния ви вид представляват амалгама от влиянията на знаците на Слънцето, Асцендента, Луната и другите планети, но най-голяма “тежест” имат знака на Слънцето и на Асцендента. Градусът, в който попада Асцендента е условното “начало” на вашия хороскоп и на вашият живот. Знакът, в който се намира Асцендента показва как се проявявате на външен план, определя вашия облик, характер, здраве, интереси, а понякога дори и професията ви. Вследствие на въртенето на Земята около оста си, на всеки два часа изгрява следващ зодиакален знак, затова точният час на раждане се явява ключов при определянето на вашия Асцендент. В графиката по-горе е даден пример, в който Слънцето се намира в знака Близнаци и е изгряло преди 4 часа, а в илюстрирания момент на източния хоризонт изгрява знака Лъв, следователно той ще бъде и знак на Асцендента.
+                                    </p>
+                                    <hr class="hr1em">
+                                    <div class="title-bordered border__solid">
+                                        <h3 style="margin-top:10px;" class="c air">Асцендент Близнаци - Външен вид</h3>
+                                    </div>
+                                    <p class="service-p fe fs16">
+                                        Асцендентът е един от най-важните фактори, които определят външния вид на човека. Индивидуалният и неповторим вид на всеки човек обаче се определя не само от знака на Асцендента, но и от знака на Слънцето, Луната и планетите в първи дом на хороскопа.
+                                    </p>
+                                    <p class="service-p fe fs16"><strong><span class="orange-color">Близнаци принадлежи към групата на въздушните знаци</span></strong></p>
+<p class="service-p fe fs16">Те се отличават с подвижно, изразително лице, небрежни прически, пробягващ поглед. Лека, пъргава походка, възможно некоординирани движения на ръцете и краката; звънък глас; комуникативност; може да разговарят с няколко човека наведнъж; обаче се държат на дистанцията при общуването, избягват емоционалния контакт; предпочитат младежкия, елегантно-спортен стил в дрехите; топли и тъмни тонове на облеклото. </p>
+<p class="service-p fe fs16">Характерно за асцендент Близнаци – тясно издължено лице, неспокойни очи, добре очертани устни. Косата най-често права, с тънък косъм, светла. Младежки вид, тънък и дълъг нос, малки, хитри, подвижни очи </p>
+                                    <span class="center-block c air"><strong>Типичен представител на Асцендент Близнаци:</strong></span>
+                                                                        <div class="wp-caption aligncenter sun-air">
+                                        <img class="center-block" src="https://astro5.net/images/signs/asc2/030603michelle_pfeiffer.jpg" alt="Мишел Пфайфър" title="Мишел Пфайфър" />
+                                        <p class="wp-caption-text sun-cap"> Смарагд</p>
+                                    </div>
+                                                                        <hr class="hr1em">
+                                    <div class="title-bordered border__solid">
+                                        <h3 style="margin-top:10px;" class="c air">Обща характеристика</h3>
+                                    </div>
+                                    <p class="service-p fe fs16">
+                                        Този асцендент ви определя като общителна, активна и разкрепостена личност. Стремите се да се пробвате в колкото се може повече различни области на живота. В резултат на това често сменяте интересите си, имиджа си и дори приятелите си. С присъщата си жажда за знания и готовност за учене поглъщате огромни обеми информация и все сте любопитни за още и още. За хората с асцендент Близнаци е важно да не правят прекалено чести промени, тъй като така животът им може да се окаже повърхностен, лишен от дълбочина. Затова може би е добре да откриете вашата уникална дарба, талант или умение, към които да се придържате в рамките на целия си живот 
+                                    </p>
+                                    <p class="service-p fe fs16">
+                                        <strong><span class="orange-color">Планета управител на Асцендента – Меркурий<img style="margin-top: -3px;" src='https://astro5.net/images/glyphs/planets/2/48/merkurii2.png' width="24" height="24"></span></strong>
+                                        Във вашият личен хороскоп планетата управител попада в знак <strong><span class="orange-color">Лъв</span></strong> . Характеристиките на този знак допълват влиянието на знака на Асцендента
+                                    </p>
+                                    <hr class="hr1em">
+                                    <div class="title-bordered border__solid">
+                                        <h3 style="margin-top:10px;" class="c air">Асцендентът и здравето</h3>
+                                    </div>
+                                    <p class="service-p fe fs16">Този зодиакален знак управлява ръцете, раменете, белите дробове, тимусната жлеза, горните ребра, трахеята, бронхите, капилярите, дишането и окисляването на кръвта. Това са и най-уязвимите на заболявания части от вашето тяло. Вие повече от всички други знаци сте изложени на нервни смущения. По принцип сте нехайни към здравето си и имате много вредни навици. Често прибягвате към самолечение, не обичате да ходите по лекари. Най характерните заболявания са: бронхити, астма, пневмония, плеврит, нервни разстройства, изтръпване на крайниците </p>
+<p class="service-p fe fs16">Препоръките към вас са да дишате по-често чист въздух, да прекарват повече време на открито, да се движите, да спортувате, да не пушат цигари и да избягват задимени пространства. </p>
+                                    <p class="service-p fe fs16">
+                                        <b>Забележка</b>:
+                                        Освен Асцендента, здравето и заболяванията
+                                        зависят и от аспектите на планетите във вашия
+                                        хороскоп и други астро-фактори, които не са
+                                        взети под внимание в този текст. Освен това,
+                                        конкретните заболявания, които ще се проявят
+                                        зависят много от начина ви на живот. Дадените
+                                        по-горе описания са общи и не следва да се
+                                        приемат като диагноза или насоки за лечение. Ако
+                                        имате някакви оплаквания трябва да се
+                                        консултирате с лекар.
+                                    <p>
+                                    <hr class="hr1em">
+                                    <div class="title-bordered border__solid">
+                                        <h3 style="margin-top:10px;" class="c air">Асцендентът и професията</h3>
+                                    </div>
+                                    <p class="service-p fe fs16">Този Асцендент предполага да упражнявате професии, в които се борави с информация и където вашият ум може да влезе в действие. Сръчни сте, и можете да се спрете и на професия в която се майстори нещо с ръцете. Също така предпочитате професии, в които можете да общувате с хора, да пътувате често. Не бихте упражнявали професии, в които ще ви е скучно, или изискват постоянна концентрация на вниманието </p>
+<p class="service-p fe fs16"><strong>Области </strong> - реклама, медии, журналистика, образование, търговия, издателска дейност, техника, Интернет, филология, посредническа дейност, спорт, занаятчийство, инженерна дейност, транспорт, право, услуги </p>
+<p class="service-p fe fs16"><strong>Професии </strong> - рекламен агент, журналист, радиоводещ, говорител, куриер, продавач, посредник, издател, библиотекар, секретар, писател, адвокат, преводач, инженер, свободни професии, шофьор, телевизионен или радиотехник и др. </p>
+                                    <hr>
+                                                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row top-buffer">
+                    <div class="col-md-12">
+                        <div role="tabpanel" class="planets">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+<!--                                <li role="presentation" class="active earth"><a href="#tab2-1" aria-controls="tab2-1" role="tab" data-toggle="tab" aria-expanded="true"><strong>Луна</strong></a></li>
+                                <li role="presentation" class="fire"><a href="#tab2-2" aria-controls="tab2-2" role="tab" data-toggle="tab" aria-expanded="true"><strong>Меркурий</strong></a></li>
+                                <li role="presentation" class="air"><a href="#tab2-3" aria-controls="tab2-3" role="tab" data-toggle="tab" aria-expanded="true"><strong>Венера</strong></a></li>
+                                <li role="presentation" class="water"><a href="#tab2-4" aria-controls="tab2-4" role="tab" data-toggle="tab" aria-expanded="true"><strong>Марс</strong></a></li>
+                                <li role="presentation" class="water"><a href="#tab2-5" aria-controls="tab2-5" role="tab" data-toggle="tab" aria-expanded="true"><strong>Юпитер</strong></a></li>
+                                <li role="presentation" class="water"><a href="#tab2-6" aria-controls="tab2-6" role="tab" data-toggle="tab" aria-expanded="true"><strong>Сатурн</strong></a></li>
+                                <li role="presentation" class="earth"><a href="#tab2-7" aria-controls="tab2-7" role="tab" data-toggle="tab" aria-expanded="true"><strong>Уран</strong></a></li>
+                                <li role="presentation" class="water"><a href="#tab2-8" aria-controls="tab2-8" role="tab" data-toggle="tab" aria-expanded="true"><strong>Нептун</strong></a></li>
+                                <li role="presentation" class="earth"><a href="#tab2-9" aria-controls="tab2-9" role="tab" data-toggle="tab" aria-expanded="true"><strong>Плутон</strong></a></li>-->
+                                <!--<li role="presentation" class="water"><a href="#tab2-10" aria-controls="tab2-10" role="tab" data-toggle="tab" aria-expanded="true"><strong>Хирон</strong></a></li>-->
+
+                                <li id="p1" role="presentation" class="active "><a href="#tab2-1" aria-controls="tab2-1" role="tab" data-toggle="tab" aria-expanded="true"><strong>Луна</strong></a></li>
+                                <li id="p2" role="presentation" class=""><a href="#tab2-2" aria-controls="tab2-2" role="tab" data-toggle="tab" aria-expanded="true"><strong>Меркурий</strong></a></li>
+                                <li id="p3" role="presentation" class=""><a href="#tab2-3" aria-controls="tab2-3" role="tab" data-toggle="tab" aria-expanded="true"><strong>Венера</strong></a></li>
+                                <li id="p4" role="presentation" class=""><a href="#tab2-4" aria-controls="tab2-4" role="tab" data-toggle="tab" aria-expanded="true"><strong>Марс</strong></a></li>
+                                <li id="p5" role="presentation" class=""><a href="#tab2-5" aria-controls="tab2-5" role="tab" data-toggle="tab" aria-expanded="true"><strong>Юпитер</strong></a></li>
+                                <li id="p6" role="presentation" class=""><a href="#tab2-6" aria-controls="tab2-6" role="tab" data-toggle="tab" aria-expanded="true"><strong>Сатурн</strong></a></li>
+                                <li id="p7" role="presentation" class=""><a href="#tab2-7" aria-controls="tab2-7" role="tab" data-toggle="tab" aria-expanded="true"><strong>Уран</strong></a></li>
+                                <li id="p8" role="presentation" class=""><a href="#tab2-8" aria-controls="tab2-8" role="tab" data-toggle="tab" aria-expanded="true"><strong>Нептун</strong></a></li>
+                                <li id="p9" role="presentation" class=""><a href="#tab2-9" aria-controls="tab2-9" role="tab" data-toggle="tab" aria-expanded="true"><strong>Плутон</strong></a></li>
+                            </ul>
+                            <!-- Tab panes -->
+                            <!--<div class="tab-content earth-border">-->
+                            <div class="tab-content">
+                                                                                                                                                                                                <div role="tabpanel" class="tab-pane active " id="tab2-1">
+                                    <div class="row">
+                                        <h4 class="earth">Луна в знак Телец <img style="margin-right: 3px;margin-top: -3px;" src='https://astro5.net/images/glyphs/signs/5/48/2.png' width="24" height="24"></h4>
+
+                                        <div class="col-md-4 pb">
+                                            <img alt="Луна" title="Луна" class="center-block planets-true earth-border" width="" src="https://astro5.net/images/planets/true/luna.png">
+                                            <h4 style="margin-top:10px;" class="earth">Характеристика</h4>
+                                            <div class="hw">
+                                                <p class="horoscope-body earths" style="font-size: 14px;">
+                                                    Докато Слънцето олицетворява мъжкото начало, Луната е символ на женското, пасивното начало в Космоса.
+                                                В хороскопа тя изразява нашите най-дълбоки жизнени  и социални потребности, основните ни нужди,
+                                                необходимостта ни от разбиране. Подсъзнанието и натрупаните в него преживявания и емоции също се
+                                                символизират от Луната. Тя показва начина, по който приемаме заобикалящия ни свят.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <h4 style="margin-top:10px;" class="earth meaning">Tълкуване</h4>
+                                            
+<p align="justify">Вие имате нужда от спокойствие и добра финансова обезпеченост, за да се чувствате добре. Топлите отношения, докосването, интимността са изключително важни за вас, за да се чувствате обичани. Майка ви навярно се е отнасяла с много загриженост за вас, не сте били лишени от нежност и внимание от нейна страна. </p>
+<p align="justify">Съзнавате, че сте прекалено привързан към собствеността си и хората, които обичате, но винаги сте готови да закриляте това или тези, което обичате. Когато сигурността ви е застрашена, може да се отдадете на прекалено ядене и пиене. </p> 
+<p align="justify">Чувствате се добре когато хората показват чувствата си към вас, помагат ви, осигуряват ви комфорт. Нуждаете се от сигурност и уют, мразите да рискувате, да губите пари, дразните се от безразсъдни хора. </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                                                                                                                <div role="tabpanel" class="tab-pane  " id="tab2-2">
+                                    <div class="row">
+                                        <h4 class="fire">Меркурий в знак Лъв <img style="margin-right: 3px;margin-top: -3px;" src='https://astro5.net/images/glyphs/signs/5/48/5.png' width="24" height="24"></h4>
+
+                                        <div class="col-md-4 pb">
+                                            <img alt="Меркурий" title="Меркурий" class="center-block planets-true fire-border" width="" src="https://astro5.net/images/planets/true/merkurii.png">
+                                            <h4 style="margin-top:10px;" class="fire">Характеристика</h4>
+                                            <div class="hw">
+                                                <p class="horoscope-body fires" style="font-size: 14px;">
+                                                    Меркурий, най-близката до Слънцето планета е показател за ума на човека, начина по който той общува. Меркурий е наричан в древността пратеник на Боговете, играел е ролята на посредник между тях и хората.
+                        Той винаги се намира близо до Слънцето, като се отдалечава от него най-много на 28 градуса.
+                        Според знака на тази планета в хороскопа съдим за дарби и таланти, умения на родения.
+                        Показва също как се проявяват комуникативните ни умения,
+                        по какъв начин установяваме контакти с хората.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <h4 style="margin-top:10px;" class="fire meaning">Tълкуване</h4>
+                                            
+<p align="justify">Вие сте идеалистично настроени, прощавате лесно, но пък и обичате да се хвалите, да блеснете по някакъв начин в компания с това, което знаете. Не се страхувате да сте в центъра на вниманието, обичате да драматизирате, да печелите аплодисменти. Искате хората да ви уважават и да приемат думите ви на доверие. Лесно се ентусиазирате, вярвате лесно на това което ви казват, но може да преживеете не едно разочарование, от това че сте се доверили на хора, които познавате малко.</p>
+<p align="justify">Не обичате да признавате грешките си, още по-малко пък да ви критикуват, особено пред много хора. Ако някой има да ви казва нещо негативно, по-добре е да го стори на четири очи, тогава има по-голям шанс да се вслушате в думите му. Лесно установявате контакт с децата, обичате занимателните игри, киното, театъра, спорта.</p>
+<p align="justify">Имате добри организаторски способности, можете да бъдете отлични преподаватели, творческите професии също са място, където можете да намерите добра реализация. Сферата на туризма и забавленията също може да бъде поле за вашите професионални изяви</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                                                                                                                <div role="tabpanel" class="tab-pane  " id="tab2-3">
+                                    <div class="row">
+                                        <h4 class="air">Венера в знак Близнаци <img style="margin-right: 3px;margin-top: -3px;" src='https://astro5.net/images/glyphs/signs/5/48/3.png' width="24" height="24"></h4>
+
+                                        <div class="col-md-4 pb">
+                                            <img alt="Венера" title="Венера" class="center-block planets-true air-border" width="" src="https://astro5.net/images/planets/true/venera.jpg">
+                                            <h4 style="margin-top:10px;" class="air">Характеристика</h4>
+                                            <div class="hw">
+                                                <p class="horoscope-body airs" style="font-size: 14px;">
+                                                     Венера, богинята на любовта, дава информация за начина по-който човек обича
+                                    и как би искал да бъде обичан. Венера показва как встъпваме във
+                                    взаимоотношения с противоположния пол, качествата на кой зодиакален знак
+                                    ни правят особено привлекателни. По знака на Венера съдим за отношението
+                                    към парите, комфорта, материалните блага. От какво се нуждаем за да бъдем
+                                    истински щастливи.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <h4 style="margin-top:10px;" class="air meaning">Tълкуване</h4>
+                                            
+<p align="justify">Вие сте изключително непостоянни в любовните си връзки, трудно се привързвате към някого. Моногамността ви тежи, вие сте от хората, които могат да са влюбени в няколко души едновременно. Нуждаете се от свобода във връзките си, може да имате повече от един брак. Харесвате интелигентни хора, с въображение и с чувство за хумор. Самите вие сте чаровни, а чарът ви се дължи най-вече на остроумието и на дар-словото ви. Лесно печелите симпатиите на хората. Имате афинитет към учение и образование, а вашето любопитство е пословично. Интересът ви към изкуствата, обаче, е твърде повърхностен и непостоянен. Изключително непрактичен сте, когато става въпрос за сделки с имущество. По-лесно харчите, отколкото задържате пари в себе си. </p>
+<p align="justify">Често пътувате в търсене на удоволствия или на себе си. Играете си с думите, обичате да се шегувате Вашата половинка трябва на всяка цена да ви казва “обичам те” колкото се може по често, за да се чувствате истински обичани. </p>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                                                                                                                                <div role="tabpanel" class="tab-pane  " id="tab2-4">
+                                    <div class="row">
+                                        <h4 class="water">Марс в знак Рак <img style="margin-right: 3px;margin-top: -3px;" src='https://astro5.net/images/glyphs/signs/5/48/4.png' width="24" height="24"></h4>
+
+                                        <div class="col-md-4 pb">
+                                            <img alt="Марс" title="Марс" class="center-block planets-true water-border" width="" src="https://astro5.net/images/planets/true/mars.jpg">
+                                            <h4 style="margin-top:10px;" class="water">Характеристика</h4>
+                                            <div class="hw">
+                                                <p class="horoscope-body waters" style="font-size: 14px;">
+                                                    Марс, богът на войната в римската митология, в астрологията символизира начина по който човек действа,
+                                    неговата физическа активност, сила, воля, желание за борба. За какво ще се използва най-вече физическата
+                                    сила и енергия. Също така, позицията на Марс в знак от зодиака може да показва каква е пригодността за
+                                    определени типове работа, какви спортове харесва дадения човек, какъв е начинът, по който се ядосва,
+                                    гневи, доколко е издръжливост на физически натоварвания.
+                                    Искате ли делата ви да вървят, съобразете се с позицията на Марс във вашата рождена астрологична карта
+                                    и той ще ви даде сили и ентусиазъм да направите всичко, което сте замислили. Само с негова помощ ще
+                                    можете да преобърнете света (ако имате такива планове, разбира се).
+                                    Една от особеностите на Марс е, че той е импулсивен и прави всичко бързо и без да му мисли много.
+                                    Той е като огъня, може да топли, но може и да пари, от вашите умения зависи как ще го използвате.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <h4 style="margin-top:10px;" class="water meaning">Tълкуване</h4>
+                                            
+
+<p align="justify">Вие ще изразходвате много енергия в дома си, във връзките с родителите и роднините, не е изключено да имате усложнени отношения с тях. В стремежа си да оправяте взаимоотношенията си с тях, може да забравите своите нужди и своя живот. </p>
+<p align="justify">Повечето неща, които правите, са заради семейството, т.е. подбудите за действия ви най-често са свързани с отношенията в семейството. Майка ви вероятно е оказала и продължава да оказва силно влияние върху вашия живот. Това може да ограничи вашата предприемчивост и активност. Може би далеч от родители и роднини ще сте по-ефективни, отколкото ако сте близо до тях. Понякога обаче, заплаха за хората, които обичате, може да се превърне в стимул, който да ви накара да &laquo;преместите&raquo; и планини. </p>
+<p align="justify">Патриоти сте, уважавате корените си, историческото минало. За вас може да се каже още, че сте много силни в полета на въображението. Там можете да постигнете всичко. Обаче, използвано умело, въображението може да бъде стимул за действие, активен помощник в постигането на целите. За вас финансовата стабилност е от първостепенна важност и ще вложите немалко усилия да я постигнете. Това ще осигури дома, семейството и децата ви и ще ви даде необходимото спокойствие. </p>
+<p align="justify">В действията си се влияете много силно от емоциите. Когато са положителни е добре, но когато се почувствате наранени, на “бял свят” излизат цял рояк отрицателни страсти – ревност, честолюбие, болни амбиции за установяване или прекъсване на отношения. </p>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                                                                                                                                <div role="tabpanel" class="tab-pane  " id="tab2-5">
+                                    <div class="row">
+                                        <h4 class="water">Юпитер в знак Рак <img style="margin-right: 3px;margin-top: -3px;" src='https://astro5.net/images/glyphs/signs/5/48/4.png' width="24" height="24"></h4>
+
+                                        <div class="col-md-4 pb">
+                                            <img alt="Юпитер" title="Юпитер" class="center-block planets-true water-border" width="" src="https://astro5.net/images/planets/true/iupiter.png">
+                                            <h4 style="margin-top:10px;" class="water">Характеристика</h4>
+                                            <div class="hw">
+                                                <p class="horoscope-body waters" style="font-size: 14px;">
+                                                     От най-дълбока древност Юпитер е считан за планета на щастието,
+                                    бил е наричан “Големият добротворец”. В хороскопа, той носи късмет,
+                                    радост и изобилие в знака и дома който се намира. Планетата е управител
+                                    на знака Стрелец и затова под нейно влияние са и дългите пътувания,
+                                    религията, духовността, висшето образование.
+                                    Според знака в който се намира, Юпитер показва чрез развитието на енергиите
+                                    и качествата на кой знак имате възможност да се почувствате щастливи.
+                                    Къде трябва да претърпите развитие, в каква посока да разширите мирогледа
+                                    и познанията си. Показва какви са философските възгледи и убеждения на
+                                    човека, как и в какво вярва. Също така символиката на този знак носи
+                                    потенциал за реализация в обществото и добра кариера.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <h4 style="margin-top:10px;" class="water meaning">Tълкуване</h4>
+                                            
+
+<p align="justify">Вие имате силна връзка с вашите родители и роднини. Вероятно сте благословени с богатство. Възможно е това богатство да е наследено, като недвижима собственост, земи. При добри аспекти това богатство може да ви осигури сигурност и спокоен живот до края на дните. </p>
+<p align="justify">Липсата на сериозни грижи за прехрана и пари са благоприятна предпоставка да се занимавате с история, философия, изкуство, да имате хоби, да пътувате. </p>
+<p align="justify">Вроденият ви оптимизъм, както и благородните чувства и пориви не ви позволяват да се заслепите от богатството и парите. Вие сте склонни да дарявате от своите средства за благородни каузи, да бъдете меценати. </p>
+<p align="justify">Обичате да предприемате дълги пътешествия, но винаги се връщате в дома си, към който сте силно привързани. При благоприятни аспекти, Юпитер ви отрежда щастливи старини, в близост до своите семейство и дом. </p>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                                                                                                                                <div role="tabpanel" class="tab-pane  " id="tab2-6">
+                                    <div class="row">
+                                        <h4 class="water">Сатурн в знак Риби <img style="margin-right: 3px;margin-top: -3px;" src='https://astro5.net/images/glyphs/signs/5/48/12.png' width="24" height="24"></h4>
+
+                                        <div class="col-md-4 pb">
+                                            <img alt="Сатурн" title="Сатурн" class="center-block planets-true water-border" width="" src="https://astro5.net/images/planets/true/saturn.png">
+                                            <h4 style="margin-top:10px;" class="water">Характеристика</h4>
+                                            <div class="hw">
+                                                <p class="horoscope-body waters" style="font-size: 14px;">
+                                                      От най-древни времена Сатурн е считан за планета, която носи нещастие,
+                                    проблеми, страдания в живота на хората. Тя символизира необходимото зло,
+                                    необходимите препятствия, които трябва да преодолеем, както и законите,
+                                    които трябва да научим за да се справим с предизвикателствата на живота.
+                                    Дали Сатурн ще бъде за вас “Големият Злосторник” или “Мъдрият учител”,
+                                    зависи от нагласата ви, с която посрещате трудностите и проблемите,
+                                    пред които ви изправя съдбата. Всяко зло за добро!
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <h4 style="margin-top:10px;" class="water meaning">Tълкуване</h4>
+                                            
+
+<p align="justify">Вероятно имате немалко вътрешни страхове, с които трябва да се справите. Това е една трудна позиция, но ако проявите повече твърдост на характера, с времето ще развиете значителна вътрешна сила. Силен е не този, който няма страхове, а този който успешно се е преборил с тях. </p>
+<p align="justify">Това от което се нуждаете е вяра. Повече вяра в себе си. Съмнението ще ви отведе директно в задънена улица, от която няма измъкване. Най-лошото, което можете да направите за себе си е да започнете да се самосъжалявате, да търсите кой е виновен в дадена ситуация. Оставете миналото зад гърба си, вземете най-ценното от него – опита и нека мечтите да ви водят. </p>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                                                                                                                                <div role="tabpanel" class="tab-pane  " id="tab2-7">
+                                    <div class="row">
+                                        <h4 class="earth">Уран в знак Дева <img style="margin-right: 3px;margin-top: -3px;" src='https://astro5.net/images/glyphs/signs/5/48/6.png' width="24" height="24"></h4>
+
+                                        <div class="col-md-4 pb">
+                                            <img alt="Уран" title="Уран" class="center-block planets-true earth-border" width="" src="https://astro5.net/images/planets/true/uran.jpg">
+                                            <h4 style="margin-top:10px;" class="earth">Характеристика</h4>
+                                            <div class="hw">
+                                                <p class="horoscope-body earths" style="font-size: 14px;">
+                                                     Уран не е бил познат на древните астролози, той е открит през 1781 г. от
+                                    Уилям Хершел. Веднага след откриването му астролозите започват да изследват
+                                    неговото влияние и установяват, че той е най-близък като вибрации до знака
+                                    Водолей, и затова става и негов управител.  
+                                    Свързва се със свободата, интелекта, оригиналността. Управлява новите
+                                    открития, новите технологии, астрологията. Уран е планета на внезапните
+                                    промени, на инцидентите, катастрофите, разделите, революциите.
+                                    Тъй като се движи сравнително бавно, в продължение на 7 години Уран
+                                    пребивава в един знак от зодиака, затова се казва, че неговото влияние
+                                    според знака в който се намира, се усеща от цяло едно поколение.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <h4 style="margin-top:10px;" class="earth meaning">Tълкуване</h4>
+                                            
+
+<p align="justify">Вие принадлежите на поколение, за което може да се каже, че не може да следва установените норми и порядки в обществото Искате да направите някакви промени – със себе си, със средата в която живеете, а ако можете да промените и света – още по добре. В работата си също се стремите да бъдете новатори, не следвате установените модели, влагате творчество в това, което правите </p>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                                                                                                                                <div role="tabpanel" class="tab-pane  " id="tab2-8">
+                                    <div class="row">
+                                        <h4 class="water">Нептун в знак Скорпион <img style="margin-right: 3px;margin-top: -3px;" src='https://astro5.net/images/glyphs/signs/5/48/8.png' width="24" height="24"></h4>
+
+                                        <div class="col-md-4 pb">
+                                            <img alt="Нептун" title="Нептун" class="center-block planets-true water-border" width="" src="https://astro5.net/images/planets/true/neptun.jpg">
+                                            <h4 style="margin-top:10px;" class="water">Характеристика</h4>
+                                            <div class="hw">
+                                                <p class="horoscope-body waters" style="font-size: 14px;">
+                                                      Нептун обикаля Слънцето за 165 години, приблизително пребивава по 14 години в знак. Това означава че хора които са родени в продължение на 14 г. например от 1956 до 1970, ще имат една и съща позиция на Нептун, а именно в Нептун в Скорпион. Което от своя страна прави характеристиките на планетата по общи и засягащи по-скоро цялото поколение, отколкото конкретния човек
+<br>Откриването на Нептун съвпада със зараждането на идеологията на Маркс (1844г.) Комунизмът като идеология е социална утопия, опиат. Утопиите са изключително важни за управниците на една държава или нация. Народът има нужда от светла идея за бъдещето, вяра, дори илюзия. Когато управляващите намерят илюзия, която отговаря на потребностите на народа, това циментира позициите им.
+<br>Ключови думи свързани със символиката на Нептун: интуиция, вяра, религия, състрадание, жертва, Божествената Любов. Музика, кино фотография, танци, внушения, заблуди, измами, зависимости (от опиати, лекарства, хора, телевизия, Интернет и др.), море, океан, течности. МЪГЛА. Психология, мистика, духовност. Транс, хипноза, екстаз, нирвана, мир, покой, единение, разтваряне на границите, медитация, усамотение, разсеяност, розови очила, влюбване
+<br>Силният Нептун в хороскопа дава усещането, че човек живее като в мъгла. Дава любов към изкуствата и свръхсетивност, състояния на транс. Асоциираме Нептун и с “Колективното несъзнавано” според К.Юнг - светът на идеите, кошмарите, на архетипите - колективни образи, за които всички имаме една и съща представа. Това може да е висшият свят, но може и да е дяволският, нисшият.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <h4 style="margin-top:10px;" class="water meaning">Tълкуване</h4>
+                                            
+
+<p align="justify">Нептун в бил в Скорпион от 1956 до 1970 г. Хората родени с тази позиция влагат голяма част от енергията си, или в някаква творческа изява или в илюзиите си и пороците си/особено в областта на секса/. Влече ги мистиката и връзката с отвъдното. Не трябва да се отдават прекалено в тези области за да не попаднат в клопките на Скорпиона – фанатичност, стигаща до мании. Имат желание за проникване в тайните на живота, на религията, на окултното. Силно любопитни са към всичко около тях, затова често им се откриват възможности за разгадаване на тези тайни. </p>
+<p align="justify">Поколението се характеризира със силна емоционалност, която привлича, но и отблъсква, когато стигне до крайности. Характерна е и голямата им способност да се възстановяват след физически и психически сривове или болести. Силното желание за реформи ги прави способни да въстанат срещу установените порядки, стига да не попаднат в плен на собствените си илюзии и фантазии или на политически страсти. </p>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                                                                                                                                <div role="tabpanel" class="tab-pane  " id="tab2-9">
+                                    <div class="row">
+                                        <h4 class="earth">Плутон в знак Дева <img style="margin-right: 3px;margin-top: -3px;" src='https://astro5.net/images/glyphs/signs/5/48/6.png' width="24" height="24"></h4>
+
+                                        <div class="col-md-4 pb">
+                                            <img alt="Плутон" title="Плутон" class="center-block planets-true earth-border" width="" src="https://astro5.net/images/planets/true/pluton.png">
+                                            <h4 style="margin-top:10px;" class="earth">Характеристика</h4>
+                                            <div class="hw">
+                                                <p class="horoscope-body earths" style="font-size: 14px;">
+                                                     Плутон е най-малката планета, по-малък по размери дори от Луната.
+                                      Открит е през 1930 година. Обикаля Слънцето за 248 години по силно разтеглена елиптична
+                                      орбита . Това прави влиянието на Плутон уникално, няма повторяемост на събитията,
+                                      които той предизвиква в рамките на един човешки живот . Събитията по Плутон се случват
+                                      веднъж, но оставят трайни отпечатъци. Това често са преживявания между живота и смъртта,
+                                      най-критичните, най-страшните моменти с които се сблъсквате. Но това са преживявания,
+                                      които често ни правят по-силни, по-добри. Например, всеки преживял клинична смърт се
+                                      връща по-одухотворен или с някаква дарба. Друг и характерни за Плутон събития са крайно
+                                      екстремните ситуации, в които получаваме сили, способности, енергия, граничещи с
+                                      невъзможното. Влиянието на Плутон след откриването му се свързва най-вече със знака
+                                      Скорпион . Тъй като се движи много бавно, влиянието му в един знак се разпростира върху
+                                      групи от хора, родени в рамките на 1-2 десетилетия.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <h4 style="margin-top:10px;" class="earth meaning">Tълкуване</h4>
+                                            
+
+<p align="justify">С Плутон в Дева са хората родени от 1956 до 1971г. С такава позиция човек обикновено не се страхува от неприятности, от работа, обича да помага на другите, но за себе си все не намира време. Обича да прави проучвания, анализи, да се рови в книги и списания. Притежава интелектуален подход към всичко и това го кара да трупа всевъзможни знания, които се надява един ден да приложи за подобряване на качеството на живота си. Негова мания е да анализира нещата и да въдворява ред там където е нужно според него. Грижата за здравето също е от първостепенно значение за хората родени през тези години. Възможни са внезапни тежки болести, които да дадат сериозно отражение върху начина им на живот. Това което трябва да се научат е, че в живота няма нищо постоянно. </p>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                                                                                                                                                                                                                                                                                                                                                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row top-buffer">
+                    <div class="col-md-12">
+                        <div role="tabpanel" class="sun-moon-aspects">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active"><a href="#tab3-1" aria-controls="tab3-1" role="tab" data-toggle="tab" aria-expanded="true"><strong>Аспекти на Слънцето и Луната към Вашия хороскоп - Днес 16.12.2019</strong></a></li>
+                                <li role="presentation" class=""><a href="#tab3-2" aria-controls="tab3-2" role="tab" data-toggle="tab" aria-expanded="true"><strong>Аспекти - Утре 17.12.2019</strong></a></li>
+                            </ul>
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="asp tab-pane active" id="tab3-1">
+                                                                        <h4 class="text-danger">
+                                        В момента няма аспекти на Слънцето и Луната към вашите лични планети
+                                    </h4>
+                                                                    </div>
+                                <div role="tabpanel" class="asp tab-pane" id="tab3-2">
+                                                                                                            <div class="aspect purple-color" style="text-align:left;">
+                                        <span>
+                                            <img alt="Луна" title="Луна" src="https://astro5.net/images/glyphs/planets/2/48/luna.png">
+                                            <img alt="секстил" title="секстил" src="https://astro5.net/images/glyphs/aspects/48/60.png">
+                                            <img alt="Марс" title="Марс" src="https://astro5.net/images/glyphs/planets/2/48/mars.png">
+                                        </span>
+                                        Луна в <span class="orange-color">секстил</span> с  Марс от рождения хороскоп 
+                                    </div>
+                                    <div class="aspect-text">
+                                        
+Луна секстил Марс
+Действате под влияние на емоциите. Не желаете да чакате. Добро взаимодействие с колежки. подходящо време за малки ремонти или промени в жилището ви. Препоръка: Следвайте интуицията си
+
+                                    </div>
+                                    <hr class="hr1em">
+                                                                                                        </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                            </main>
+            <div class="sidebar col-md-3">
+    <div class="widget_services widget widget__sidebar">
+        <div class="widget-title">
+            <a title="Годишен хороскоп 2019" href="https://astro5.net/godishen/all"><img src="https://astro5.net/images/banners/godhor4.jpg"></a>
+        </div>
+         <div class="widget-title">
+            <a title="Астрологочен тест" href="https://astro5.net/test"><img src="https://astro5.net/images/banners/test1.jpg"></a>
+        </div>
+        <div class="widget-title">
+            <a title="Личен хороскоп" href="https://astro5.net/personal"><img src="https://astro5.net/images/banners/personal4.jpg"></a>
+        </div>
+        <div class="widget-title">
+            <a title="Любовен хороскоп" href="https://astro5.net/luboven/all"><img src="https://astro5.net/images/banners/synastry5.jpg"></a>
+        </div>
+        <div class="widget-title">
+            <a title="Кармичен хороскоп" href="https://astro5.net/karmichen/all"><img src="https://astro5.net/images/banners/karma2.jpg"></a>
+        </div>
+        <div class="widget-title">
+            <a title="Месечен хороскоп" href="https://astro5.net/mesechen"><img src="https://astro5.net/images/banners/month3.jpg"></a>
+        </div>
+        <div class="widget-title">
+            <a title="Транзитен хороскоп" href="https://astro5.net/transit"><img src="https://astro5.net/images/banners/transit1.jpg"></a>
+        </div>
+        <div class="widget-title">
+            <a title="Слънчев хороскоп за 10 дни" href="https://astro5.net/sun"><img src="https://astro5.net/images/banners/sun2.jpg"></a>
+        </div>
+                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:300px;height:250px"
+                 data-ad-client="ca-pub-5190813903867315"
+                 data-ad-slot="9732520384"></ins>
+            <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+            </div>
+</div>
+
+
+        </div>
+    </div>
+</section>
+            </div>
+            <!-- Content / End -->
+
+            <!-- Footer -->
+            <footer class="footer page-section">
+                <div class="container">
+                    <div class="footer-inner">
+                        <div class="row">
+                            <div class="col-sm-3 col-md-3 cf1">
+                                <div class="ft">
+                                    <strong>
+                                        Хороскопи
+                                    </strong>
+                                </div>
+                                <ul class="footer-ul center-block">
+                                    <li> 
+                                        <a title="Личен хороскоп" href="https://astro5.net/personal">Личен хороскоп</a>
+                                    </li>
+                                    <li> 
+                                        <a title="Годишен хороскоп 2020" href="https://astro5.net/godishen/all">Годишен хороскоп 2020</a>
+                                    </li>
+                                    <li>
+                                        <a title="Любовен хороскоп" href="https://astro5.net/luboven/all">Любовен хороскоп</a>
+                                    </li>
+                                    <li>
+                                        <a title="Кармичен хороскоп" href="https://astro5.net/karmichen/all">Кармичен хороскоп</a>
+                                    </li>
+                                    <li>
+                                        <a title="Месечен хороскоп" href="https://astro5.net/mesechen">Месечен хороскоп</a>
+                                    </li>
+                                    <li>
+                                        <a title="Транзитен хороскоп" href="https://astro5.net/transit">Транзитен хороскоп</a>
+                                    </li>
+                                    <li>
+                                        <a title="Астрологичен тест" href="https://astro5.net/test">Астрологичен тест</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-4 col-md-4 col-md-offset-1 col-sm-offset-1" style="padding:0px;">
+                                <div class="row ftf">
+                                    <div class="ft special">
+                                        <strong>
+                                            Нашите приятели
+                                        </strong>
+                                    </div>
+                                    <div class="col-sm-6 col-md-6">
+                                        <ul class="footer-ul">
+                                            <li>
+                                                <a title="Астро хороскоп" target="_blank" href="https://www.astrohoroscope.info/">Астро хороскоп</a>
+                                            </li>
+                                            <li> 
+                                                <a title="Съновник" href="https://www.astrohoroscope.info/sanovnik.php" target="_blank">Съновник</a>
+                                            </li>
+                                            <li> 
+                                                <a title="Запознанства" href="http://www.amur.bg/" target="_blank">Запознанства</a>
+                                            </li>
+                                            <li>
+                                                <a title="Видео портал" href="http://veselina.net" target="_blank">Видео портал</a>   
+                                            </li>
+                                            <li>
+                                                <a title="Новини" href="http://www.bghot.net" target="_blank">Новини</a>                                    
+                                            </li>
+                                            <li>
+                                                <a title="Българска астрологична асоциация" target="_blank" href="http://bulastro.com/">Астрологична<br>асоциация</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-6 col-md-6">
+                                        <ul class="footer-ul">
+                                            <li>
+                                                <a title="Астрология и йога" target="_blank" href="http://astroyoga.info/">Астрология и йога</a>
+                                            </li>
+                                            <li>
+                                                <a title="ТианДе България" target="_blank" href="http://www.tiandebg.net">ТианДе</a>
+                                            </li>
+                                            <li>
+                                                <a title="Всичко за Гугъл" href="http://www.bgseo.net" target="_blank">Всичко за Гугъл</a>                                    
+                                            </li>
+                                            <li>
+                                                <a title="Он-лайн игри" target="_blank" href="http://www.djidjibidji.com/">Он-лайн игри</a>
+                                            </li>
+                                            <li>
+                                                <a title="SoftVisia" target="_blank" href="http://softvisia.com/">SoftVisia</a>
+                                            </li>
+                                            <li>
+                                                <a title="Дневен и лунен хороскоп за уебмастъри" target="_blank" href="https://www.astrohoroscope.info/dneven-horoskope-webmasters.php">Хороскоп за<br> уебмастъри</a>
+                                            </li>
+                                            <li>
+                                                <a title="Екстракт от маслинови листа" target="_blank" href="http://www.evergreenlife.bg">Екстракт от<br>маслинови листа</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-md-3 col-md-offset-1 col-sm-offset-1 cf3">
+                                <div class="ft">
+                                    <strong>
+                                        За сайта
+                                    </strong>
+                                </div>
+                                <ul class="footer-ul">
+                                    <li>
+                                        Всички права запазени  &copy; Astro5.net
+                                    </li>
+<!--                                    <li>                                    
+                                        За контакти: <span class="so">bgastro@gmail.com</span>
+                                    </li>-->
+                                    <li> 
+                                        <a title="Свържи се с нас" href="https://astro5.net/contact">Свържи се с нас</a>
+                                    </li>
+                                    <li> 
+                                        <a title="Поверителност" href="https://astro5.net/privacy">Поверителност</a>
+                                    </li>
+                                    <li> 
+                                        <a title="Условия за ползване" href="https://astro5.net/terms">Условия за ползване</a>
+                                    </li>
+                                    <li>
+                                    </li>
+                                    <li> 
+                                       Локус Фортуна ЕООД<br>
+                                       Фирмен код (Булстат), 148096068<br>
+                                       ДДС код  BG148096068<br>
+                                       Варна, к-в Младост 101-2-8<br>
+                                     
+                                       Имейл: bgastro@gmail.com
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Footer Social Links / End -->
+                        <div class="gap-20"></div>
+                        <!-- Footer Text -->
+                        <div class="footer-text text-center">
+                            <div class="row">
+                                <div class="col-sm-3 col-md-3">
+                                    Copyright &copy; 2006-2018
+                                </div>
+                                <div class="col-sm-6 col-md-6">
+                                    Благодарим ви, че ползвахте нашите <span class="orange-color">хороскопи</span>
+                                </div>
+                                <div class="col-sm-3 col-md-3">
+                                    <a class="orange-color" href="https://astro5.net">www.astro5.net</a> <i class="fa fa-globe"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Footer Text / End -->
+
+                    </div>
+                </div>
+            </footer>
+            <!-- Footer / End -->
+
+
+        </div>
+
+        <div id="back-top">
+            <div class="link-holder scroll-local">
+                <a href="#top" class="top-link"><i class="fa fa-chevron-up"></i></a>
+            </div>
+        </div>
+
+        <script>
+            var daily_active = 1;
+            var url = 'https://astro5.net/images/';
+            var rurl = 'https://astro5.net/';
+            var sign = '4';
+            var d = new Date();
+            var current_day = d.getDate();  
+        </script>
+        <script src="https://astro5.net/js/all-acad0fb9ca.js"></script>
+        
+        
+    </body>
+</html>
